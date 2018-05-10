@@ -1,4 +1,4 @@
-Name of Quantlet : CRIXdeeplearning
+Name of Quantlet : CRIXrnn
 
 Published in : Statistics of Financial Markets 5
 
@@ -11,7 +11,10 @@ Author : SPILAK Bruno
 Submitted : 2017/11/30
 
 Datafile :
-- Data.csv
+- dldata
+- dataset.pkl
+- Return.pkl
+- TotalLabeled.pkl
 - btc_model.hdf5
 - ltc_model.hdf5
 - xmr_model.hdf5
