@@ -93,7 +93,7 @@ def results_rnn(Return, testLabeled, var, n_days=91):
     Labeled=pd.DataFrame()
     
     for col in list(TotalReturn.columns.values):
-        Labeled[col] = TotalReturn[col]
+        Labeled[col] = TotalReturn[col].values
         Labeled['class_%s' % col] = Labeled.loc[:,col].apply(labeler,1)
 
     Targets = list(filter(lambda x: 'class' in x, Labeled.columns))
@@ -124,8 +124,8 @@ def results_rnn(Return, testLabeled, var, n_days=91):
     print('Predicting')
     pred = model.predict_classes(val_input_, verbose= 0)
     pred = pd.DataFrame(pred.reshape(pred.shape[0], pred.shape[1]))
-    testLabeled['rnn_class_%s_return(t+90)' % var] = pred[89].values
-    testLabeled['rnn_%s_return(t+90)' % var] = testLabeled['rnn_class_%s_return(t+90)' % var]*testLabeled['%s_return(t+90)' % var]
+    testLabeled.loc[:, 'rnn_class_%s_return(t+90)' % var] = pred[89].values
+    testLabeled.loc[:, 'rnn_%s_return(t+90)' % var] = testLabeled['rnn_class_%s_return(t+90)' % var].values*testLabeled['%s_return(t+90)' % var].values
     print()
     
     return testLabeled
@@ -133,12 +133,3 @@ def results_rnn(Return, testLabeled, var, n_days=91):
 def save_object(obj, filename):
     with open(filename, 'wb') as output:  # Overwrites any existing file.
         pickle.dump(obj, output, pickle.HIGHEST_PROTOCOL)
-#data
-#dataset, Return, TotalLabeled = dataComplete()
-
-
-#save_object(dataset, '../dataset.pkl')
-#save_object(Return, '../Return.pkl')
-#save_object(TotalLabeled, '../TotalLabeled.pkl')
-
-
