@@ -2,7 +2,7 @@ Name of Quantlet : CRIXbtcBB
 
 Published in : Deep Neural Networks for Cryptocurrencies Price Prediction
 
-Description: 'Bollinger bands indicator for btc'
+Description: Compute Bollinger bands indicator for btc.
 
 Keywords: Bollinger bands, Bitcoin, cryptocurrency
 
