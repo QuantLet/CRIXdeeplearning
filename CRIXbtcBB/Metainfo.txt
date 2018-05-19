@@ -2,16 +2,14 @@ Name of Quantlet : CRIXbtcBB
 
 Published in : Deep Neural Networks for Cryptocurrencies Price Prediction
 
-Description : 'Tuning of different MLP architecture for BTC trend predictions'
+Description: 'Bollinger bands indicator for btc'
 
-Keywords : neural networks, MLP, deep learning, Bitcoin, cryptocurrency, prediction, time series, stock price forecast
+Keywords: Bollinger bands, Bitcoin, cryptocurrency
 
 Author : SPILAK Bruno
 
-Submitted : 2018/05/19
+Submitter : 2018/05/19
 
-Datafile :
-- Data.csv
+Datafile : Data.csv
 
-Output :
-- CRIXbtcBB1
+Output: CRIXbtcBB1
