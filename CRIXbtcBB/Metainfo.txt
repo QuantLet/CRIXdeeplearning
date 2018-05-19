@@ -1,0 +1,17 @@
+Name of Quantlet : CRIXbtcBB
+
+Published in : Deep Neural Networks for Cryptocurrencies Price Prediction
+
+Description : 'Tuning of different MLP architecture for BTC trend predictions'
+
+Keywords : neural networks, MLP, deep learning, Bitcoin, cryptocurrency, prediction, time series, stock price forecast
+
+Author : SPILAK Bruno
+
+Submitted : 2018/05/19
+
+Datafile :
+- Data.csv
+
+Output :
+- CRIXbtcBB1

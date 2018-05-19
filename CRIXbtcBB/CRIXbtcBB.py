@@ -1,7 +1,5 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-# set style, empty figure and axes
-plt.style.use('ggplot')
 
 path = open("Data.csv", "r")
 data = pd.read_csv(path,header=0)
@@ -36,4 +34,4 @@ ax.fill_between(x_axis,  upper, lower, color='lightskyblue')
 ax.plot(x_axis, btc, color='red', lw=2)
 ax.plot(x_axis, ma, color='green', lw=1.5)
 plt.show()
-fig.savefig('btc_bb.png')
+fig.savefig('CRIXbtcBB1.png')

@@ -26,6 +26,8 @@ Output :
 - dataset.pkl
 - Return.pkl
 - TotalLabeled.pkl
+- CRIXrnn1
+- CRIXrnn2
 - RNN models architectures
 - Report on the classification forecasts
 - Report on the portfolio performance
