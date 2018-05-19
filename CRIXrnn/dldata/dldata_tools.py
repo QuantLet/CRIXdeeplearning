@@ -112,7 +112,7 @@ def results_rnn(Return, testLabeled, var, n_days=91):
     val_target = val[1].reshape(val[1].shape[0],val[1].shape[1],1)
     
     K.clear_session()
-    model = load_model('%s_model.hdf5' % var)
+    model = load_model('dldata/%s_model.hdf5' % var)
     print()
     print('Model summary for %s' %var)
     print()

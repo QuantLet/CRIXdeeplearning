@@ -12,9 +12,7 @@ Submitted : 2017/11/30
 
 Datafile :
 - dldata
-- dataset.pkl
-- Return.pkl
-- TotalLabeled.pkl
+- Data.csv
 - btc_model.hdf5
 - ltc_model.hdf5
 - xmr_model.hdf5
@@ -24,7 +22,10 @@ Datafile :
 - nmc_model.hdf5
 - nxt_model.hdf5
 
-Output : 
+Output :
+- dataset.pkl
+- Return.pkl
+- TotalLabeled.pkl
 - RNN models architectures
 - Report on the classification forecasts
 - Report on the portfolio performance
