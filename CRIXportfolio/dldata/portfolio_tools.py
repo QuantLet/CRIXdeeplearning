@@ -21,7 +21,7 @@ n_in = n_out = 90
 labeler = labeler3D
 
 cryptos = ['btc', 'dash', 'xrp', 'xmr', 'ltc', 'doge', 'nxt', 'nmc']
-
+'''
 #To know how these tables are created look at basic_result function
 testLabeled = pd.read_pickle('dldata/testLabeled.pkl')
 prices = pd.read_pickle('dldata/prices.pkl')
@@ -36,8 +36,10 @@ crypto_returns = pd.DataFrame(prices.iloc[n_out:].values/prices.iloc[:-n_out].va
 crypto_returns.index = prices.iloc[:-n_out].index
 crypto_returns.columns = prices.columns
 
-
+'''
 risk_free_returns = 1/100
+
+
 
 """Return = pd.read_pickle('C:\\Users\\BS\\Documents\\NewData\\Algorithm\\Portfolio comparison\\Return.pkl')
 
@@ -58,11 +60,11 @@ def load_prediction(mypath):
     prediction.drop(prediction.columns[[0]], axis=1,inplace = True)
     return prediction
 
-def marketK_weights(trading_signal):
+def marketK_weights(marketK, trading_signal):
     weights = (trading_signal * marketK.values).multiply(1/(trading_signal.abs() * marketK.values).sum(1), 'index')
     return weights
 
-def price_weights(trading_signal):
+def price_weights(prices, trading_signal):
     weights = trading_signal
     weights = weights*prices.iloc[:-n_out].values
     div = prices.iloc[:-n_out].abs().sum(1).values
@@ -75,7 +77,7 @@ def equal_weights(trading_signal):
     weights = weights.multiply(1/div, 'index')
     return weights
 
-def summed_returns(trading_signal):
+def summed_returns(crypto_returns, trading_signal):
     return np.sum(trading_signal * crypto_returns.values, 1)
 
 
@@ -86,7 +88,7 @@ def long_short_signal(short, prediction):
     return trading_signal
 
 
-def weighted_portfolio(short, weight):
+def weighted_portfolio(crypto_returns, short, weight):
     if short == True:
         return np.nan_to_num((weight*crypto_returns.values).sum(1)  + 2 * weight[weight < 0].fillna(0).abs().sum(1) * risk_free_returns)
     else:
