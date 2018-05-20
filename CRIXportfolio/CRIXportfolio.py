@@ -209,6 +209,12 @@ long_short_marketK['lstm_portfolio'] = lstm_portfolio
 long_short_marketK['rnn_portfolio'] = rnn_portfolio
 long_short_marketK['mlp_portfolio'] = mlp_portfolio
 
+f, axarr = plt.subplots(2, sharex=True, figsize = (15, 15))
+axarr[0].plot(long_short_marketK, lw = 1.5)
+axarr[0].set_title('Long/short MarketK weighted portfolio: quarterly returns')
+axarr[1].plot(long_short_marketK.cumsum(), lw = 1.5)
+axarr[1].set_title('Long/short MarketK weighted portfolio: cumulative quartely returns')
+plt.savefig('CRIXportfolio4.png')
 
 ##########################################
 ############ Equally weighted ############
@@ -348,6 +354,12 @@ long_short_equal['lstm_portfolio'] = lstm_portfolio
 long_short_equal['rnn_portfolio'] = rnn_portfolio
 long_short_equal['mlp_portfolio'] = mlp_portfolio
 
+f, axarr = plt.subplots(2, sharex=True, figsize = (15, 15))
+axarr[0].plot(long_short_equal, lw = 1.5)
+axarr[0].set_title('Long/short Equally weighted portfolio: quarterly returns')
+axarr[1].plot(long_short_equal.cumsum(), lw = 1.5)
+axarr[1].set_title('Long/short Equally weighted portfolio: cumulative quartely returns')
+plt.savefig('CRIXportfolio5.png')
 
 ########################################
 ############ Price weighted ############
@@ -488,6 +500,12 @@ long_short_price['lstm_portfolio'] = lstm_portfolio
 long_short_price['rnn_portfolio'] = rnn_portfolio
 long_short_price['mlp_portfolio'] = mlp_portfolio
 
+f, axarr = plt.subplots(2, sharex=True, figsize = (15, 15))
+axarr[0].plot(long_short_price, lw = 1.5)
+axarr[0].set_title('Long/short Price weighted portfolio: quarterly returns')
+axarr[1].plot(long_short_price.cumsum(), lw = 1.5)
+axarr[1].set_title('Long/short Price weighted portfolio: cumulative quartely returns')
+plt.savefig('CRIXportfolio6.png')
 
 ##########################################
 ######### Performance comparison #########

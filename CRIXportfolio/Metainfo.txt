@@ -17,7 +17,4 @@ Datafile :
 - dldata
 
 Output :
-- CRIXportfolio1
-- CRIXportfolio2
-- CRIXportfolio3
 - Comparison of performance of each strategies
