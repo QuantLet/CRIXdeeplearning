@@ -122,7 +122,7 @@ def results_rnn(Return, testLabeled, var, n_days=91):
     (loss, accuracy) = model.evaluate(val_input_,val_target)
     print("[INFO] loss={:.4f}, accuracy: {:.4f}%".format(loss, accuracy * 100))
     print('Predicting')
-    pred = model.predict_classes(val_input_, verbose= 0)
+    pred = np.argmax(model.predict(val_input_), axis=1)
     pred = pd.DataFrame(pred.reshape(pred.shape[0], pred.shape[1]))
     testLabeled.loc[:, 'rnn_class_%s_return(t+90)' % var] = pred[89].values
     testLabeled.loc[:, 'rnn_%s_return(t+90)' % var] = testLabeled['rnn_class_%s_return(t+90)' % var].values*testLabeled['%s_return(t+90)' % var].values
