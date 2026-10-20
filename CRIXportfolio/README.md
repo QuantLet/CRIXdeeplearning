@@ -11,7 +11,7 @@ Published in: Deep Neural Networks for Cryptocurrencies Price Prediction
 
 Description: Build three cryptocurrencies portfolios based on price movements forecasts
 
-with MLP, RNN and LSTM neural networks in order to outperform CRIX. We apply three different weight strategies: 
+with MLP, RNN and LSTM neural networks in order to outperform CRIX. We apply three different weight strategies: price, marketcap and equally weighted portfolios. We use the predictions to build quarterly rebalanced buy and hold portfolios and also long-short portfolios. We compare the performance with the baseline models.'
 
 Keywords: neural networks, deep learning, cryptocurrency, CRIX, portfolio, prediction, time series, stock price forecast
 
